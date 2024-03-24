@@ -4,6 +4,7 @@ import { useGlobalContext } from "./context";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import SingleMovieInfo from "./SingleMovieInfo";
+import Error from "./Error";
 
 const Movies = () => {
   const { query, setQuery } = useGlobalContext();
@@ -29,6 +30,13 @@ const Movies = () => {
   }
 
   const movies = data.Search;
+
+  if (movies == undefined)
+    return (
+      <div className="text-2xl ">
+        <div>No Movie Found...</div>
+      </div>
+    );
 
   return (
     <div className="max-w-2xl px-4 mx-auto my-8 sm:px-6 sm:py-4 lg:max-w-7xl lg:px-8">
