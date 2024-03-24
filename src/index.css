@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-["Lato"];
+  }
+}
+
+@layer utilities {
+  .btn {
+    @apply py-4 px-4 bg-secondary hover:bg-opacity-70 rounded-[30px] text-white text-lg font-semibold;
+  }
+
+  .bg-color {
+    @apply bg-[rgba(17,22,28,0.82)];
+  }
+
+  .flex-custom-center {
+    @apply flex items-center justify-center;
+  }
+
+  .head-text {
+    @apply mt-4 text-6xl leading-[72px] font-bold tracking-[-1.2px] text-gray-900;
+  }
+}
